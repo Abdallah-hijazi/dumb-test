@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dumb-test</title>
+    
+    <!-- ma eli  khle2 zabet ldesigne ktir :) 
+        hata yemken ykoun b2alba bugs 3al phone i didn't test it 
+        bas if you want feel free to edit it and send it to me -->
+    
+    <style>
+        #movingbtn{
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+            left : 20px;
+            top : 50px;
+            font-size: 30px;
+        }
+        #answerbtn{
+            margin-left: 1200px;
+            margin-right: 10px;
+            position: absolute;
+            left : 20px;
+            top : 50px;
+            font-size: 30px;
+            justify-content: right;
+        }
+        body{
+            width : 100%;
+            background: black;
+        }
+        .ctr{
+            width: 100%;
+            height : 100%;
+        }
+        .box{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script>
+        function change(){
+            let b = document.getElementById("movingbtn");
+            let i = Math.floor(Math.random()*500)+1;
+            let j = Math.floor(Math.random()*500)+1;
+            b.style.marginLeft = i+'px';
+            b.style.marginTop = j + "px";
+        }
+        function result() {
+            alert("HaHa I knew it :P")
+        }
+    </script>
+</head>
+<body>
+    <div class="box">
+        <h1 style="font-size: 60px; text-align: center; margin-bottom: 20px; color: white;">Are you Dumb?</h1>
+    </div>
+    <div class="ctr">
+        <input type="submit" id="movingbtn" value="No" onclick="change()">
+        <input type="submit" id="answerbtn" value="yes" onclick="result()">
+    </div>
+</body>
+</html>
